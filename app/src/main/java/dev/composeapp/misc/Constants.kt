@@ -1,4 +1,4 @@
-package dev.magnetico.renatre.fiscalizacion.compose.misc
+package dev.composeapp.misc
 
 class Constants {
     companion object {

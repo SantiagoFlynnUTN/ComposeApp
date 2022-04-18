@@ -1,4 +1,4 @@
-package dev.magnetico.renatre.fiscalizacion.compose.ui.theme
+package dev.composeapp.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

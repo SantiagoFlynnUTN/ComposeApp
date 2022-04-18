@@ -1,6 +1,6 @@
-package dev.magnetico.renatre.fiscalizacion.compose.network.services
+package dev.composeapp.network.services
 
-import dev.magnetico.renatre.fiscalizacion.compose.network.responses.ItemResponse
+import dev.composeapp.network.model.ItemResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Url

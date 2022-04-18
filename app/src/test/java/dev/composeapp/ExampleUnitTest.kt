@@ -1,4 +1,4 @@
-package dev.magnetico.renatre.fiscalizacion.compose
+package dev.composeapp
 
 import org.junit.Test
 

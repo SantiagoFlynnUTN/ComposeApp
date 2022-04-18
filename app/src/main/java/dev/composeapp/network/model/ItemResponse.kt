@@ -1,4 +1,4 @@
-package dev.magnetico.renatre.fiscalizacion.compose.network.responses
+package dev.composeapp.network.model
 
 import com.google.gson.annotations.SerializedName
 

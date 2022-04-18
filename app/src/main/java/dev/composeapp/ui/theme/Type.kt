@@ -1,4 +1,4 @@
-package dev.magnetico.renatre.fiscalizacion.compose.ui.theme
+package dev.composeapp.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
