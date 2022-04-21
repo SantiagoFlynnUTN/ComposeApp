@@ -17,12 +17,11 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import dev.composeapp.misc.Constants.Companion.LOCALHOST_URL
-import dev.composeapp.network.model.ItemResponse
+import dev.composeapp.network.model.ItemDTO
 import dev.composeapp.network.services.ItemsService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -83,7 +82,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun getItems(): Retrofit {
+    private fun getService(): Retrofit {
         return Retrofit.Builder()
             .baseUrl("http://$LOCALHOST_URL/")
             .addConverterFactory(GsonConverterFactory.create())
@@ -92,8 +91,11 @@ class MainActivity : ComponentActivity() {
 
     private fun getItemsCoroutine(){
         CoroutineScope(Dispatchers.IO).launch {
-            val call:Response<ItemResponse> = getItems().create(ItemsService::class.java).getItemsFromApi("get")
-            println(call.body())
+            val call:ItemDTO = getService()
+                .create(ItemsService::class.java)
+                .getItemsFromApi("get")
+
+            println(call)
         }
     }
 
