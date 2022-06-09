@@ -15,15 +15,25 @@ public class HolaController {
     @ResponseBody
     public Map<String, Object> endPointExample() {
 
-        Map<String, Object> rtn = new LinkedHashMap<>();
-        Map<String, Object> in = new LinkedHashMap<>();
-        ArrayList<String> on = new ArrayList<>();
-        on.add("hola");
-        on.add("chau");
 
-        in.put("test1", "test");
-        in.put("test2", "test");
-        rtn.put("items", on);
+
+
+        Map<String, Object> oi1 = new LinkedHashMap<>();
+        Map<String, Object> oi2 = new LinkedHashMap<>();
+        ArrayList<Map<String, Object>> on = new ArrayList<>();
+        Map<String, Object> in = new LinkedHashMap<>();
+        Map<String, Object> rtn = new LinkedHashMap<>();
+
+
+        oi1.put("id", "12");
+        oi1.put("prov", "buenos Aires");
+        oi2.put("id", "3");
+        oi2.put("prov", "buenos Aires");
+        on.add(oi1);
+        on.add(oi2);
+        in.put("toInspect", on);
+        //in.put("test2", "test");
+        rtn.put("data", in);
         rtn.put("status", "success");
 
         return rtn;

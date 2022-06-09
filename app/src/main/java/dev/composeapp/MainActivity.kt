@@ -16,8 +16,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
+import dev.composeapp.domain.model.Item
 import dev.composeapp.misc.Constants.Companion.LOCALHOST_URL
 import dev.composeapp.network.model.ItemDTO
+import dev.composeapp.network.model.ItemDTOMapper
 import dev.composeapp.network.services.ItemsService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -96,6 +98,11 @@ class MainActivity : ComponentActivity() {
                 .getItemsFromApi("get")
 
             println(call)
+
+            val mapper = ItemDTOMapper()
+            val item : Item = mapper.mapToDomainModel(call)
+
+            println(item)
         }
     }
 
