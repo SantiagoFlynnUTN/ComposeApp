@@ -1,6 +1,6 @@
 package dev.composeapp.domain.utils
 
-interface DomainMapper <Entity, DomainModel> {
+interface DomainMapper<Entity, DomainModel> {
 
     fun mapFromEntity(entity: Entity): DomainModel
 

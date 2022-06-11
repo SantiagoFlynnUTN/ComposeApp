@@ -3,7 +3,7 @@ package dev.composeapp.network.model
 import dev.composeapp.domain.model.Recipe
 import dev.composeapp.domain.utils.DomainMapper
 
-class RecipeDTOMapper: DomainMapper<RecipeDto, Recipe> {
+class RecipeDTOMapper : DomainMapper<RecipeDto, Recipe> {
 
     override fun mapFromEntity(dto: RecipeDto): Recipe {
         return Recipe(
@@ -33,11 +33,11 @@ class RecipeDTOMapper: DomainMapper<RecipeDto, Recipe> {
         )
     }
 
-    fun fromEntityList(initial: List<RecipeDto>): List<Recipe>{
+    fun fromEntityList(initial: List<RecipeDto>): List<Recipe> {
         return initial.map { mapFromEntity(it) }
     }
 
-    fun toEntityList(initial: List<Recipe>): List<RecipeDto>{
+    fun toEntityList(initial: List<Recipe>): List<RecipeDto> {
         return initial.map { mapToEntity((it)) }
     }
 }

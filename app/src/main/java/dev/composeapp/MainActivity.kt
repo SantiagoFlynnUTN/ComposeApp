@@ -3,10 +3,7 @@ package dev.composeapp
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import com.google.gson.GsonBuilder
-import dev.composeapp.domain.model.Recipe
-import dev.composeapp.network.model.RecipeDTOMapper
 import dev.composeapp.network.services.RecipeService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO

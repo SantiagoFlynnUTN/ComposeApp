@@ -1,9 +1,7 @@
 package dev.composeapp.domain.model
 
-/**
- * See Recipe example: https://food2fork.ca/
- */
-data class Recipe (
+
+data class Recipe(
     val id: Int,
     val title: String,
     val publisher: String,
